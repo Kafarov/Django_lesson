@@ -22,4 +22,9 @@ def login(reqest):
 
 
 def news(reqest):
-    return render(reqest, 'mainapp/news.html')
+    cnt = range(5)
+    return render(reqest, 'mainapp/news.html', {'range': cnt})
+
+def news_with_pagiinator(reqest, pk):
+    cnt = range(5)
+    return render(reqest, 'mainapp/news.html', {'range': cnt})
